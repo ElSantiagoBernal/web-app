@@ -42,16 +42,9 @@ RUN sh -c "ng build --output-path=/dist $BUILD_ENVIRONMENT_OPTIONS"
 FROM $NGINX_IMAGE
 
 COPY --from=builder /dist/browser /usr/share/nginx/html
+COPY ./nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 80
+EXPOSE 443
 
 # When the container starts, replace the env.js with values from environment variables
 CMD ["/bin/sh",  "-c",  "envsubst < /usr/share/nginx/html/assets/env.template.js > /usr/share/nginx/html/assets/env.js && exec nginx -g 'daemon off;'"]
-
-FROM nginx:alpine
-
-# Copy app build 
-COPY ./dist/mifosx-web-app /usr/share/nginx/html
-
-# Copy nginx.conf to configure HTTPS
-COPY ./nginx.conf /etc/nginx/nginx.conf
