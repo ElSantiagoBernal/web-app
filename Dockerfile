@@ -51,7 +51,7 @@ CMD ["/bin/sh",  "-c",  "envsubst < /usr/share/nginx/html/assets/env.template.js
 FROM nginx:alpine
 
 # Copy app build 
-COPY ./dist /usr/share/nginx/html
+COPY ./build /usr/share/nginx/html
 
 # Copy nginx.conf to configure HTTPS
 COPY ./nginx.conf /etc/nginx/nginx.conf
