@@ -5,11 +5,11 @@
   window["env"]["fineractApiUrls"] = '';
   window["env"]["fineractApiUrl"]  = 'https://18.191.248.51:8443';
 
-  window["env"]["apiProvider"] = '';
-  window["env"]["apiVersion"]  = '';
+  window["env"]["apiProvider"] = '/fineract-provider/api';
+  window["env"]["apiVersion"]  = '/v1';
 
-  window["env"]["fineractPlatformTenantId"]  = '';
-  window["env"]["fineractPlatformTenantIds"]  = '';
+  window["env"]["fineractPlatformTenantId"]  = 'default';
+  window["env"]["fineractPlatformTenantIds"]  = 'default';
 
   // Language Environment variables
   window["env"]["defaultLanguage"] = '';
