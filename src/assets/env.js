@@ -3,7 +3,7 @@
 
   // BackEnd Environment variables
   window["env"]["fineractApiUrls"] = '';
-  window["env"]["fineractApiUrl"]  = '';
+  window["env"]["fineractApiUrl"]  = 'https://18.191.248.51:8443';
 
   window["env"]["apiProvider"] = '';
   window["env"]["apiVersion"]  = '';
