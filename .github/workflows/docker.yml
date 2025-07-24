@@ -84,7 +84,7 @@ jobs:
               -e FINERACT_API_URLS=https://web-app-santi-fiter-test.duckdns.org \
               -e FINERACT_PLATFORM_TENANT_IDENTIFIER=default \
               --name webapp \
-              -p 4200:4200 \
+              -p 4200:80 \
               -v /etc/letsencrypt:/etc/letsencrypt:ro \
               $ECR_REPOSITORY:latest
 
