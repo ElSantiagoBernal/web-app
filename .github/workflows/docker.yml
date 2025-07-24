@@ -81,7 +81,7 @@ jobs:
 
             docker run -d \
               --name webapp \
-              -p 443:443 \
+              -p 4200:443 \
               -v /etc/letsencrypt:/etc/letsencrypt:ro \
               $ECR_REPOSITORY:latest
 
